@@ -1,0 +1,267 @@
+<Project>
+  <Name>UnityLocalNotification</Name>
+  <ProjectItem type="NClass.DiagramEditor.ClassDiagram.Diagram" assembly="NClass.DiagramEditor, Version=2.4.1823.0, Culture=neutral, PublicKeyToken=null">
+    <Name>ClassDiagram</Name>
+    <Language>CSharp</Language>
+    <Entities>
+      <Entity type="Class">
+        <Name>Publisher</Name>
+        <Access>Public</Access>
+        <Location left="357" top="335" />
+        <Size width="416" height="183" />
+        <Collapsed>False</Collapsed>
+        <Member type="Field">NotificationConfigData nConfig</Member>
+        <Member type="Field">AndroidJavaObject publisher</Member>
+        <Member type="Method">public void Publish(Notification notification)</Member>
+        <Member type="Constructor">internal Publisher(string channelId, string channelName, string channelDescription)</Member>
+        <Member type="Method">public void SetNotificationConfig(NotificationConfigData config)</Member>
+        <Modifier>None</Modifier>
+      </Entity>
+      <Entity type="Class">
+        <Name>LibraryConfig</Name>
+        <Access>Public</Access>
+        <Location left="13" top="586" />
+        <Size width="312" height="216" />
+        <Collapsed>False</Collapsed>
+        <Member type="Field">public readonly AndroidJavaObject context</Member>
+        <Member type="Field">private static LibraryConfig instance</Member>
+        <Member type="Field">public readonly string PACKAGE_NAME</Member>
+        <Member type="Field">public readonly AndroidJavaObject resource</Member>
+        <Member type="Property">public static LibraryConfig Instance { get; }</Member>
+        <Member type="Constructor">private LibraryConfig()</Member>
+        <Modifier>None</Modifier>
+      </Entity>
+      <Entity type="Class">
+        <Name>NotificationConfigData</Name>
+        <Access>Public</Access>
+        <Location left="666" top="586" />
+        <Size width="268" height="281" />
+        <Collapsed>False</Collapsed>
+        <Member type="Field">public int priority</Member>
+        <Member type="Field">public string smallIcon</Member>
+        <Member type="Field">public string largeIcon</Member>
+        <Member type="Field">public string bigPicture</Member>
+        <Member type="Field">public bool autoCancel</Member>
+        <Member type="Field">public int id</Member>
+        <Member type="Constructor">public NotificationConfigData()</Member>
+        <Member type="Method">public NotificationConfigData Priority(int value)</Member>
+        <Member type="Method">public NotificationConfigData SmallIcon(string value)</Member>
+        <Member type="Method">public NotificationConfigData LargeIcon(string value)</Member>
+        <Member type="Method">public NotificationConfigData BigPicture(string value)</Member>
+        <Member type="Method">public NotificationConfigData AutoCancel(bool value)</Member>
+        <Modifier>None</Modifier>
+      </Entity>
+      <Entity type="Class">
+        <Name>Notification</Name>
+        <Access>Public</Access>
+        <Location left="357" top="586" />
+        <Size width="263" height="383" />
+        <Collapsed>False</Collapsed>
+        <Member type="Field">private AndroidBundle data</Member>
+        <Member type="Field">internal int id</Member>
+        <Member type="Field">internal long delaySeconds</Member>
+        <Member type="Field">internal long intervalSeconds</Member>
+        <Member type="Field">private ResourceIdManagaer resIdMan</Member>
+        <Member type="Field">internal HashSet&lt;string&gt; setFields</Member>
+        <Member type="Constructor">public Notification()</Member>
+        <Member type="Method">public Notification Id(int id)</Member>
+        <Member type="Method">public Notification Priority(int priority)</Member>
+        <Member type="Method">public Notification Title(string title)</Member>
+        <Member type="Method">public Notification Message(string message)</Member>
+        <Member type="Method">public Notification Delay(TimeSpan delay)</Member>
+        <Member type="Method">public Notification Interval(TimeSpan interval)</Member>
+        <Member type="Method">public Notification SmallIconName(string name)</Member>
+        <Member type="Method">public Notification LargeIconName(string name)</Member>
+        <Member type="Method">public Notification BigPictureName(string name)</Member>
+        <Member type="Method">public Notification AutoCancle(bool value)</Member>
+        <Member type="Method">public AndroidJavaObject GetData()</Member>
+        <Modifier>None</Modifier>
+      </Entity>
+      <Entity type="Class">
+        <Name>AndroidBundle</Name>
+        <Access>Public</Access>
+        <Location left="516" top="994" />
+        <Size width="264" height="163" />
+        <Collapsed>False</Collapsed>
+        <Member type="Field">private AndroidJavaObject mBundl</Member>
+        <Member type="Property">public AndroidJavaObject Bundle { get; }</Member>
+        <Member type="Constructor">public AndroidBundle()</Member>
+        <Member type="Method">public AndroidBundle Put &lt;T&gt;(string key, T value)</Member>
+        <Member type="Method">public object Get(string key)</Member>
+        <Modifier>None</Modifier>
+      </Entity>
+      <Entity type="Class">
+        <Name>PublisherManager</Name>
+        <Access>Public</Access>
+        <Location left="79" top="10" />
+        <Size width="687" height="216" />
+        <Collapsed>False</Collapsed>
+        <Member type="Field">private static PublisherManager instance</Member>
+        <Member type="Field">private Dictionary&lt;string, Publisher&gt; publishers</Member>
+        <Member type="Property">public static PublisherManager Instance { get; }</Member>
+        <Member type="Constructor">private PublisherManager()</Member>
+        <Member type="Method">public Publisher CreatePublisher(string channelId, string channelName, string channelDescription)</Member>
+        <Member type="Method">public Publisher GetPublisher(string channelId)</Member>
+        <Modifier>None</Modifier>
+      </Entity>
+      <Entity type="Class">
+        <Name>NotificationConfig</Name>
+        <Access>Public</Access>
+        <Location left="410" top="1262" />
+        <Size width="271" height="332" />
+        <Collapsed>False</Collapsed>
+        <Member type="Field">public int priority</Member>
+        <Member type="Field">public string smallIconName</Member>
+        <Member type="Field">public string largeIconName</Member>
+        <Member type="Field">public string bigPictureName</Member>
+        <Member type="Field">public PreDefinedColor colorName</Member>
+        <Member type="Field">int newField</Member>
+        <Member type="Field">int newField</Member>
+        <Member type="Field">public PreDefinedColor colorName</Member>
+        <Member type="Field">public PreDefinedColor lightColorName</Member>
+        <Member type="Field">public string soundName</Member>
+        <Member type="Field">public bool autoCancel = true</Member>
+        <Member type="Field">private NotificationConfigData configData</Member>
+        <Member type="Field">private bool isSet = false</Member>
+        <Member type="Method">public void Awake()</Member>
+        <Member type="Method">public NotificationConfigData GetDataConfig()</Member>
+        <Modifier>None</Modifier>
+      </Entity>
+      <Entity type="Class">
+        <Name>MonoBehaviour</Name>
+        <Access>Public</Access>
+        <Location left="190" top="1301" />
+        <Size width="162" height="216" />
+        <Collapsed>False</Collapsed>
+        <Modifier>None</Modifier>
+      </Entity>
+      <Entity type="Class">
+        <Name>ResourceIdManagaer</Name>
+        <Access>Public</Access>
+        <Location left="171" top="1033" />
+        <Size width="292" height="162" />
+        <Collapsed>False</Collapsed>
+        <Member type="Field">private static ResourceIdManager instance</Member>
+        <Member type="Field">private string packageName</Member>
+        <Member type="Field">private AndroidJavaObjacet resource</Member>
+        <Member type="Method">public int GetResourceId(string name, string category)</Member>
+        <Member type="Property">public static ResourceIdManager Instance { get; }</Member>
+        <Modifier>None</Modifier>
+      </Entity>
+      <Entity type="Class">
+        <Name>Canceler</Name>
+        <Access>Public</Access>
+        <Location left="13" top="335" />
+        <Size width="205" height="179" />
+        <Collapsed>False</Collapsed>
+        <Member type="Field">private static Canceler instance</Member>
+        <Member type="Field">private AndroidJavaClass canceler</Member>
+        <Member type="Field">private AndroidJavaObject context</Member>
+        <Member type="Method">public void Cancel(int notificationId)</Member>
+        <Member type="Constructor">public Canceler()</Member>
+        <Member type="Property">public static Canceler Instance { get; }</Member>
+        <Modifier>None</Modifier>
+      </Entity>
+    </Entities>
+    <Relationships>
+      <Relationship type="Association" first="0" second="1">
+        <StartOrientation>Vertical</StartOrientation>
+        <EndOrientation>Vertical</EndOrientation>
+        <BendPoint relativeToStartShape="True">
+          <X>412</X>
+          <Y>543</Y>
+        </BendPoint>
+        <Direction>Unidirectional</Direction>
+        <AssociationType>Association</AssociationType>
+      </Relationship>
+      <Relationship type="Association" first="0" second="2">
+        <StartOrientation>Vertical</StartOrientation>
+        <EndOrientation>Vertical</EndOrientation>
+        <BendPoint relativeToStartShape="True">
+          <X>728</X>
+          <Y>542</Y>
+        </BendPoint>
+        <BendPoint relativeToStartShape="False">
+          <X>794</X>
+          <Y>542</Y>
+        </BendPoint>
+        <Direction>Unidirectional</Direction>
+        <AssociationType>Association</AssociationType>
+      </Relationship>
+      <Relationship type="Association" first="0" second="3">
+        <StartOrientation>Vertical</StartOrientation>
+        <EndOrientation>Vertical</EndOrientation>
+        <Direction>Unidirectional</Direction>
+        <AssociationType>Association</AssociationType>
+      </Relationship>
+      <Relationship type="Association" first="5" second="0">
+        <StartOrientation>Vertical</StartOrientation>
+        <EndOrientation>Vertical</EndOrientation>
+        <Direction>Unidirectional</Direction>
+        <AssociationType>Association</AssociationType>
+      </Relationship>
+      <Relationship type="Association" first="6" second="2">
+        <StartOrientation>Vertical</StartOrientation>
+        <EndOrientation>Vertical</EndOrientation>
+        <BendPoint relativeToStartShape="False">
+          <X>795</X>
+          <Y>1137</Y>
+        </BendPoint>
+        <Direction>Unidirectional</Direction>
+        <AssociationType>Association</AssociationType>
+      </Relationship>
+      <Relationship type="Generalization" first="6" second="7">
+        <StartOrientation>Horizontal</StartOrientation>
+        <EndOrientation>Horizontal</EndOrientation>
+        <BendPoint relativeToStartShape="True">
+          <X>385</X>
+          <Y>1406</Y>
+        </BendPoint>
+      </Relationship>
+      <Relationship type="Association" first="6" second="1">
+        <StartOrientation>Vertical</StartOrientation>
+        <EndOrientation>Vertical</EndOrientation>
+        <BendPoint relativeToStartShape="True">
+          <X>449</X>
+          <Y>1237</Y>
+        </BendPoint>
+        <BendPoint relativeToStartShape="False">
+          <X>156</X>
+          <Y>1223</Y>
+        </BendPoint>
+        <Direction>Unidirectional</Direction>
+        <AssociationType>Association</AssociationType>
+      </Relationship>
+      <Relationship type="Association" first="3" second="4">
+        <StartOrientation>Vertical</StartOrientation>
+        <EndOrientation>Horizontal</EndOrientation>
+        <Direction>Unidirectional</Direction>
+        <AssociationType>Association</AssociationType>
+      </Relationship>
+      <Relationship type="Association" first="8" second="1">
+        <StartOrientation>Vertical</StartOrientation>
+        <EndOrientation>Vertical</EndOrientation>
+        <Direction>Unidirectional</Direction>
+        <AssociationType>Association</AssociationType>
+      </Relationship>
+      <Relationship type="Association" first="3" second="8">
+        <Label>
+        </Label>
+        <StartOrientation>Vertical</StartOrientation>
+        <EndOrientation>Vertical</EndOrientation>
+        <BendPoint relativeToStartShape="True">
+          <X>417</X>
+          <Y>1001</Y>
+        </BendPoint>
+        <Direction>Bidirectional</Direction>
+        <AssociationType>Aggregation</AssociationType>
+      </Relationship>
+      <Relationship type="Association" first="9" second="1">
+        <StartOrientation>Vertical</StartOrientation>
+        <EndOrientation>Vertical</EndOrientation>
+        <Direction>Unidirectional</Direction>
+        <AssociationType>Association</AssociationType>
+      </Relationship>
+    </Relationships>
+  </ProjectItem>
+</Project>

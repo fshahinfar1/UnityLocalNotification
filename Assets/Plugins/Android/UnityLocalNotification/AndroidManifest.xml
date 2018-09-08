@@ -1,0 +1,18 @@
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+  package="com.ElmoGame.LocalNotificaiton"
+  android:versionCode="1"
+  android:versionName="1.0">
+
+  <application>
+    <!-- localNotification -->
+    <receiver android:name=
+      "shahinfar.farbod.unitylocalnotificationlibrary.ScheduleReceiver">
+      <intent-filter>
+          <action android:name=
+              "shahinfar.farbod.UnityLocalNotification.action.schedule.intent" />
+          <category android:name="android.intent.category.DEFAULT" />
+      </intent-filter>
+    </receiver>
+    <!-- localNotification -->
+  </application>
+</manifest>

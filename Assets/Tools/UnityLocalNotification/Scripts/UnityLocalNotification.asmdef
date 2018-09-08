@@ -1,0 +1,8 @@
+{
+    "name": "UnityLocalNotification",
+    "references": [],
+    "optionalUnityReferences": [],
+    "includePlatforms": [],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false
+}
