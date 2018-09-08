@@ -27,3 +27,6 @@ Notification notification = new Notification()
 
 publisher.Publish(notification);
 ```
+
+## class diagram
+[class diagram](/Documents/classDiagram.png)
