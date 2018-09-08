@@ -4,12 +4,12 @@ This repository allows to send local notification from unity project
 on android devices.
 
 ## Features
-*. you can send local notification in android
-*. you can schedule sending notification for some time in future
-*. you can send notification having big picture style
+* you can send local notification in android
+* you can schedule sending notification for some time in future
+* you can send notification having big picture style
 
 ## Issues
-*. not all android notification features are supported
+* not all android notification features are supported
 
 
 ## sample code
