@@ -27,5 +27,8 @@ publisher.Publish(notification);
 ## Screenshots
 ![Notification](/Documents/Screenshot_20180909-085228.png)
 
+## Unity asset
+[Unity local notification asset](UnityLocalNotificationAsset.unitypackage)
+
 ## Class diagram
 [class diagram](/Documents/classDiagram.png)
