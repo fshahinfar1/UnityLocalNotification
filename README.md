@@ -25,7 +25,7 @@ publisher.Publish(notification);
 ```
 
 ## Screenshots
-![Notification](/Documents/Screenshot_20180909-085228.png)
+![Notification](/Documents/Screenshot_20180909-085228.png | width=360)
 
 ## Unity asset
 [Unity local notification asset](UnityLocalNotificationAsset.unitypackage)
